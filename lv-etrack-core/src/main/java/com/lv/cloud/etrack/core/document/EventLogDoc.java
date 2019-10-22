@@ -74,6 +74,18 @@ public class EventLogDoc {
     @Field(type=FieldType.Long)
     private Long createTime;
 
+    /**
+     * 日志级别：INFO，WARN，ERROR
+     */
+    @Field(type=FieldType.Text)
+    private String level;
+
+    /**
+     * 日志类型(LOGIC/SYSTEM)
+     */
+    @Field(type=FieldType.Text)
+    private String type;
+
     public String getId() {
         return id;
     }
@@ -160,5 +172,21 @@ public class EventLogDoc {
 
     public void setCreateTime(Long createTime) {
         this.createTime = createTime;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

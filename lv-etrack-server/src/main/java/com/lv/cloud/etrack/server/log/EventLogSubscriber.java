@@ -30,7 +30,7 @@ public class EventLogSubscriber {
     @Resource
     private ElasticsearchOperations elasticsearchOperations;
 
-    @KafkaListener(id = "eventLogGroup", topics = "topic-lv.event.log")
+    @KafkaListener(id = "eventLogGroup", topics = "topic-lv.event.log", concurrency="20")
     public void listen(List<EventLogDoc> list) throws IOException {
         if(CollectionUtils.isEmpty(list)){
            return;

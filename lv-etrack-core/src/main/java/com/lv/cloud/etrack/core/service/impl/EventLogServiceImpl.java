@@ -39,7 +39,7 @@ public class EventLogServiceImpl implements IEventLogService {
     public List<EventLogDoc> query(Map<String, Object> params) {
 //        eventLogRepository.search();
         BoolQueryBuilder qb= QueryBuilders.boolQuery();
-        qb.should(QueryBuilders.termQuery("appName","lvcloud-test2".toLowerCase()));
+        qb.should(QueryBuilders.matchPhraseQuery("appName","lv-etrack-test".toLowerCase()));
         SearchQuery searchQuery = new NativeSearchQueryBuilder()
                 .withQuery(qb)
                 .withHighlightFields(new HighlightBuilder.Field("appName").fragmentSize(15))
