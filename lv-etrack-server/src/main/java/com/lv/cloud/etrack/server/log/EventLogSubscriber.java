@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -42,7 +41,7 @@ public class EventLogSubscriber {
             eventLogService.add(list.get(0));
         }
 
-        List<EventLogDoc> rs = eventLogService.query(new HashMap<>());
-        System.out.println(rs);
+//        List<EventLogDoc> rs = eventLogService.query(new HashMap<>());
+//        System.out.println(rs);
     }
 }
