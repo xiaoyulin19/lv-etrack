@@ -36,3 +36,8 @@
        spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer
        spring.kafka.producer.value-serializer=org.springframework.kafka.support.serializer.JsonSerializer
        
+   ### 使用
+   
+   例子：EventLogger logger = EventLoggerFactory.getLog(EventLogTestController.class);
+   logger.infoLogicLog(...);logger.errorLogicLog(...);logger.outputSystemLog(...);
+       

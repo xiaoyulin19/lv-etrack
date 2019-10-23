@@ -34,7 +34,7 @@ public class EventLogger {
      * @param bussinessId 业务id（比如订单号）
      * @param tag 标记（便于检索）
      */
-    public void outputSystemEventLog(String bussinessCode, String errorCode, String message, String detail, Throwable ex, Object bussinessId, String tag){ 
+    public void outputSystemLog(String bussinessCode, String errorCode, String message, String detail, Throwable ex, Object bussinessId, String tag){
     	try {
 			// 调用方法
     		int i = 2;
@@ -68,7 +68,7 @@ public class EventLogger {
      * @param message 日志描述（要求简短）
      * 
      */
-    public void infoLogicEventLog(String bussinessCode, Object bussinessId, String tag, String message){
+    public void infoLogicLog(String bussinessCode, Object bussinessId, String tag, String message){
         try {
 			// 输出日志
 			int i = 2;
@@ -89,7 +89,7 @@ public class EventLogger {
      * @param message 日志描述（要求简短）
      * @param detail 日志详情
      */
-    public void infoLogicEventLog(String bussinessCode, Object bussinessId, String tag, String message, String detail){
+    public void infoLogicLog(String bussinessCode, Object bussinessId, String tag, String message, String detail){
         try {
 			// 输出日志
 			int i = 2;
@@ -109,7 +109,7 @@ public class EventLogger {
      * @param tag 标记（便于检索）
      * @param bussinessCode 业务/模块编码
      */
-    public void warnLogicEventLog(String bussinessCode, Object bussinessId, String tag, String message, String detail){
+    public void warnLogicLog(String bussinessCode, Object bussinessId, String tag, String message, String detail){
         try {
 			// 输出日志
 			int i = 2;
@@ -131,7 +131,7 @@ public class EventLogger {
      * @param message 日志描述（要求简短）
      * 
      */
-    public void errorLogicEventLog(String bussinessCode, String errorCode, Object bussinessId, String tag, String message){
+    public void errorLogicLog(String bussinessCode, String errorCode, Object bussinessId, String tag, String message){
         try {
 			// 输出日志
 			int i = 2;
@@ -153,7 +153,7 @@ public class EventLogger {
      * @param message 日志描述（要求简短）
      * @param detail 日志详情
      */
-    public void errorLogicEventLog(String bussinessCode, String errorCode, Object bussinessId, String tag, String message, String detail){
+    public void errorLogicLog(String bussinessCode, String errorCode, Object bussinessId, String tag, String message, String detail){
         try {
 			// 输出日志
 			int i = 2;
@@ -174,7 +174,7 @@ public class EventLogger {
      * @param message 日志描述（要求简短）
      * @param detail 日志详情
      */
-    public void errorLogicEventLog(String bussinessCode, Object bussinessId, String tag, String message, String detail){
+    public void errorLogicLog(String bussinessCode, Object bussinessId, String tag, String message, String detail){
         try {
 			// 输出日志
 			int i = 2;

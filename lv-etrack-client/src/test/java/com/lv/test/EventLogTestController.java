@@ -18,9 +18,9 @@ public class EventLogTestController {
 
     @GetMapping(path = "/send/event/{what}")
     public void sendFoo(@PathVariable String what) {
-        logger.errorLogicEventLog("test-event", "test_error", 3211L, "ORDER",
+        logger.errorLogicLog("test-event", "test_error", 3211L, "ORDER",
                 "事件:"+what, "error-403");
-        logger.outputSystemEventLog("test-event", "test_error","事件:"+what, "error-403",
+        logger.outputSystemLog("test-event", "test_error","事件:"+what, "error-403",
                 new Exception("test ex"), 3211L, "ORDER");
     }
 }
