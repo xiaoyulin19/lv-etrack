@@ -1,6 +1,7 @@
 package com.lv.cloud.etrack.client.producer;
 
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.scheduling.annotation.Async;
 
 import java.io.Serializable;
 
@@ -19,6 +20,7 @@ public class EventLogKafkaTemplate {
         this.kafkaTemplate = kafkaTemplate;
     }
 
+    @Async("etraceAsyncExecutor")
     public void sendEventLog(EventLogVo eventLog){
         kafkaTemplate.send(TOPIC_NAME, eventLog);
     }

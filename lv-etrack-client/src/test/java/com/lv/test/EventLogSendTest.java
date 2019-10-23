@@ -22,8 +22,9 @@ public class EventLogSendTest {
 
     @Test
     public void test(){
-        logger.errorLogicEventLog("test-event", "test_error", 2222L, "ORDER",
+        logger.errorLogicEventLog("test-event", "test_error", 3211L, "ORDER",
                 "测试测试", "error-405");
+
     }
 
 }
