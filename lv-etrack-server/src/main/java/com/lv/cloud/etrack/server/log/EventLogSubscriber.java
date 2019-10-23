@@ -40,8 +40,5 @@ public class EventLogSubscriber {
         }else {
             eventLogService.add(list.get(0));
         }
-
-//        List<EventLogDoc> rs = eventLogService.query(new HashMap<>());
-//        System.out.println(rs);
     }
 }
